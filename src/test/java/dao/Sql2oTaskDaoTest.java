@@ -11,8 +11,10 @@ public class Sql2oTaskDaoTest {
 
     @Before
     public void setUp() throws Exception {
-        String connectionString = "jdbc:postgresql://localhost:5432/todolist_test";;
-        Sql2o sql2o = new Sql2o(connectionString, "moring", "clifford");
+//        String connectionString = "jdbc:postgresql://localhost:5432/todolist_test";;
+//        Sql2o sql2o = new Sql2o(connectionString, "moring", "clifford");
+        String connectionString = "jdbc:postgresql://ec2-54-144-251-233.compute-1.amazonaws.com:5432/ddudfvdt5eg58t";;
+        Sql2o sql2o = new Sql2o(connectionString, "kupdrklxnieuki", "272137e64cc0f3d0f141e09e18ccc6596e70f48c2c10ed465df3404d05ab76a9");
         taskDao = new Sql2oTaskDao(sql2o); //ignore me for now
         conn = sql2o.open(); //keep connection open through entire test so it does not get erased
     }
